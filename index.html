@@ -1,0 +1,31 @@
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- 這裡導入 cdn 伺服器中的 brython 程式庫 -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/brython@3.9.5/brython.min.js">
+    </script>
+</head>
+
+<!-- 若使用單獨網頁 <body onload="brython()"> -->
+<!-- 以下為 cmsimde 所使用的方式 -->
+<script>
+window.onload=function(){
+brython({debug:1, pythonpath:['/static/','./../downloads/py/']});
+}
+</script>
+
+<script type="text/python">
+
+from browser import document
+
+document <= "Hello !"
+
+</script>
+
+
+</body>
+
+</html>
